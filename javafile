@@ -1,0 +1,17 @@
+reTurnFlashlightOn = false
+            val stream = arrayOf("1","0","1","0","0","1","0","1")
+            var ctr=0
+            for(i in stream){
+                if(i=="1"){
+                mCameraImpl!!.enableFlashlight()
+                TimeUnit.SECONDS.sleep(1)
+                ctr+=1}
+                if(i=="0"){
+                mCameraImpl!!.disableFlashlight()   // code for switching on and off the LED, corresponding to second button in the app and the switching happens according to the sequence in the array
+                TimeUnit.SECONDS.sleep(1)
+                ctr+=1}
+                if(ctr==stream.size){
+                    exitProcess(-1)
+                }
+            }
+           // startActivity(Intent(applicationContext, BrightDisplayActivity::class.java))
