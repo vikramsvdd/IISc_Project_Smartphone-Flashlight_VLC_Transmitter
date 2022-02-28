@@ -15,3 +15,44 @@ reTurnFlashlightOn = false
                 }
             }
            // startActivity(Intent(applicationContext, BrightDisplayActivity::class.java))
+
+# Newer Version - 28/02/2022
+bright_display_btn.setOnClickListener {
+            reTurnFlashlightOn = false
+            val stream = arrayOf("1","0","1","0","0","1","0","1")
+            var ctr=0
+            for(i in stream){
+                if(i=="0"){
+                    mCameraImpl!!.enableFlashlight()
+                    TimeUnit.MILLISECONDS.sleep(17)
+                    mCameraImpl!!.disableFlashlight()
+                    TimeUnit.MILLISECONDS.sleep(17)
+                    ctr+=1}
+                if(i=="1"){
+                    mCameraImpl!!.enableFlashlight()
+                    TimeUnit.MILLISECONDS.sleep(43)
+                    mCameraImpl!!.disableFlashlight()
+                    TimeUnit.MILLISECONDS.sleep(17)   // code for switching on and off the LED, corresponding to second button in the app and the switching happens according to the sequence in the array
+                    ctr+=1}
+
+                println("Runned NIgger")
+                if(ctr==stream.size){
+                    exitProcess(-1)
+                }
+            }
+            /*var arrey= arrayOf(11000)
+            for( i in 1..50){
+                val start = System.currentTimeMillis()
+                mCameraImpl!!.enableFlashlight()
+                TimeUnit.MICROSECONDS.sleep(1)
+                val end = System.currentTimeMillis()
+                println("The Value in ms is : ${end - start} ms")
+                mCameraImpl!!.disableFlashlight()
+                TimeUnit.MICROSECONDS.sleep(1)
+
+
+            }*/
+
+
+            // startActivity(Intent(applicationContext, BrightDisplayActivity::class.java))
+        }
