@@ -56,3 +56,129 @@ bright_display_btn.setOnClickListener {
 
             // startActivity(Intent(applicationContext, BrightDisplayActivity::class.java))
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        fun append(arr: Array<Char?>, element: Char?): Array<Char?> {
+        val array = arrayOfNulls<Char>(arr.size + 1)
+        System.arraycopy(arr, 0, array, 0, arr.size)
+        array[arr.size] = element
+        return array}
+
+        fun bitstuff(msg : String): Array<Char?> {
+            var temp= arrayOf<Char?>()
+            var stream= arrayOf<Char?>()
+            var ctr=0
+            for(i in msg){
+                temp= append(temp,i)
+                ctr+=1
+                if(ctr==8){
+                    var ttr=0
+                    var onec=0
+                    for(j in temp){
+                        if(ttr==0){
+                            stream=append(stream,'0')
+                            stream=append(stream,j)
+                            ttr+=1
+                            if(j=='1'){
+                                onec+=1
+                            }
+                        }
+                        else{
+                            stream=append(stream,j)
+                            ttr+=1
+                            if(j=='1'){
+                                onec+=1
+                            }
+                            if(ttr==8){
+                                if(onec%2==0){
+                                    stream=append(stream,'1')
+                                }
+                                if(onec%2!=0){
+                                    stream=append(stream,'0')
+                                }
+                                stream=append(stream,'1')
+                                ctr=0
+                            }
+                            //stream=append(stream,parity bit)
+                            //
+                        }
+
+                    }
+
+                }
+
+
+
+
+
+
+            }
+            return stream
+
+        }
+
+    fun Reciever(Stream: Array<Char>){
+        var tb=0
+        var num= arrayOf<Char?>()
+        var ctr=0
+        var onec=0
+        for(i in Stream){
+            if(i=='0' && tb==0){
+                tb=1
+                continue
+            }
+            if(tb==1 && ctr<9){
+                num=append(num,i)
+                ctr+=1
+                if(i=='1'){onec+=1}
+            }
+            if(ctr==9){
+                if(i=='0'){
+                    if(onec%2!=0){
+                        kum=append(kum,num)
+                    }
+                    else{
+                        print("ERROR BRO,Check it ")
+                    }
+
+                }
+               else{
+                    if(i=='1'){
+                        if(onec%2==0){
+                            kum=append(kum,num)
+                        }
+                        else{
+                            print("ERROR BRO,Check it ")
+                        }
+
+               }                    // parity checking -by DR SARO AKA SARAVANAN
+
+
+            }
+
+            if(ctr==10){
+                tb=0
+                num= arrayOf<Char?>()
+                ctr=0
+            }
+
+
+
+
+        }
+
+    }
+
+
+
+
+
