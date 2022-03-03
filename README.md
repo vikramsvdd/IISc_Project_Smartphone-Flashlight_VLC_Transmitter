@@ -14,3 +14,5 @@ https://www.ti.com/tool/analog-engine...
 
 Download the Analog Engineer's Pocket Reference e-book.
 https://www.ti.com/amplifier-circuit/..
+
+https://www.ti.com/lit/an/sloa093/sloa093.pdf
