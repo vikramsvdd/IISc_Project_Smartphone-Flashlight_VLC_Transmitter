@@ -1,0 +1,28 @@
+# Python 3 program to convert
+# string into binary string
+
+# utility function
+def strToBinary(s):
+    bin_conv = []
+    for c in s:
+        ascii_val = ord(c)
+        binary_val = bin(ascii_val)
+        if(len(binary_val)==9):
+            bin_conv.append('0'+binary_val[2:])
+        else:
+            bin_conv.append('0'+'0'+binary_val[2:])
+    return (''.join(bin_conv))
+
+# Driver Code
+if __name__ == '__main__':
+	s = 'A.Chockalingam'
+
+k=strToBinary(s)
+stream=[]
+for i in k:
+    stream.append(i)
+print(stream)
+    
+    
+
+
