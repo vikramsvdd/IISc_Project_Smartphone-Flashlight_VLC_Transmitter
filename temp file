@@ -1,54 +1,27 @@
- /* private lateinit var executor: Executor
-    private lateinit var biometricPrompt: BiometricPrompt
-   // private lateinit var promptInfo: BiometricPrompt.PromptInfo*/
-   
-   
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-executor = ContextCompat.getMainExecutor(this)
-        biometricPrompt=BiometricPrompt(this@MainActivity, executor ,object: BiometricPrompt.AuthenticationCallback(){
-            override fun onAuthenticationError(errorCode: Int, errString: CharSequence?) {
+tvAuthStatus=findViewById(R.id.tvAuthStatus)
+        executor=ContextCompat.getMainExecutor(this)
+        biometricPrompt=androidx.biometric.BiometricPrompt(this@MainActivity, executor ,object: androidx.biometric.BiometricPrompt.AuthenticationCallback(){
+            override fun onAuthenticationError(errorCode: Int, errString: CharSequence) {
                 super.onAuthenticationError(errorCode, errString)
-                authStatusTv.text="Authentication Error:$errString"
-                Toast.makeText(this@MainActivity,"Authentication Error:$errString",Toast.LENGTH_SHORT).show()
-            }
+                tvAuthStatus.text="Error"+errString
 
-            override fun onAuthenticationSucceeded(result: BiometricPrompt.AuthenticationResult?) {
+            }
+            override fun onAuthenticationSucceeded(result: androidx.biometric.BiometricPrompt.AuthenticationResult) {
                 super.onAuthenticationSucceeded(result)
-                authStatusTv.text="Authentication Sucess"
-                Toast.makeText(this@MainActivity,"Authentication Sucess",Toast.LENGTH_SHORT).show()
+                tvAuthStatus.text="Sucess"
+
 
             }
 
             override fun onAuthenticationFailed() {
                 super.onAuthenticationFailed()
-                authStatusTv.text="Authentication Failed"
-                Toast.makeText(this@MainActivity,"Authentication Failed",Toast.LENGTH_SHORT).show()
-
+                tvAuthStatus.text="Failed"
             }
 
-/*promptInfo=BiometricPrompt.PromptInfo.Builder()
+
+         })
+        promptInfo=androidx.biometric.BiometricPrompt.PromptInfo.Builder()
             .setTitle("Bio Authentication")
             .setSubtitle("Login using fingerprint")
             .setNegativeButtonText("Use App Password")
-            .build()*/
-
-
-        })
+            .build()
