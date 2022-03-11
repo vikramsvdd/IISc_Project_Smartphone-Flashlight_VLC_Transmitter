@@ -1,3 +1,27 @@
+ /* private lateinit var executor: Executor
+    private lateinit var biometricPrompt: BiometricPrompt
+   // private lateinit var promptInfo: BiometricPrompt.PromptInfo*/
+   
+   
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 executor = ContextCompat.getMainExecutor(this)
         biometricPrompt=BiometricPrompt(this@MainActivity, executor ,object: BiometricPrompt.AuthenticationCallback(){
             override fun onAuthenticationError(errorCode: Int, errString: CharSequence?) {
@@ -20,7 +44,11 @@ executor = ContextCompat.getMainExecutor(this)
 
             }
 
-
+/*promptInfo=BiometricPrompt.PromptInfo.Builder()
+            .setTitle("Bio Authentication")
+            .setSubtitle("Login using fingerprint")
+            .setNegativeButtonText("Use App Password")
+            .build()*/
 
 
         })
