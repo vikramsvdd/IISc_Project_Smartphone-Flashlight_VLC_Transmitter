@@ -48,3 +48,20 @@ val stream=arrayOf("01", "10", "00", "11", "01", "10", "10", "00", "01", "10", "
                         exitProcess(-1)
                     }*/
                      }
+                     
+                     
+                     
+                     
+                     // for arduinno
+                     if((t2-t1)>=51){
+    Serial.println("00");
+    }
+  else if((t2-t1)>=34 and (t2-t1)<51){
+    Serial.println("11");
+    }
+  else if((t2-t1)>=17 and (t2-t1)<34){
+    Serial.println("10");
+    }    
+ 
+  else{  
+    Serial.println("01"); }
