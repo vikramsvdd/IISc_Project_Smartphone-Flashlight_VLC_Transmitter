@@ -1,4 +1,4 @@
-# JuPyterWorkflow and ModulationPractice-repo
+# IISc- Workflow
 
 https://irplus-remote.github.io/#learning
 
