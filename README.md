@@ -17,9 +17,9 @@ https://www.ti.com/amplifier-circuit/..
 
 https://www.ti.com/lit/an/sloa093/sloa093.pdf
 
-https://www.youtube.com/watch?v=XtcC9OJRdTE
 
 
-https://www.mobilewithdrivers.com/naijarom/magisk-root/lenovo-k33
 
-https://www.youtube.com/watch?v=KmXye20e32o
+
+
+
