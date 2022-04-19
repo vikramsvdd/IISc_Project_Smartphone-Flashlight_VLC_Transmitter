@@ -19,3 +19,4 @@ https://www.ti.com/amplifier-circuit/..
 
 https://www.ti.com/lit/an/sloa093/sloa093.pdf
 
+https://github.com/termux/termux-packages/issues/601 (regarding termux)
