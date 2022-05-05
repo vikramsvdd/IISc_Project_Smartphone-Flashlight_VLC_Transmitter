@@ -8,3 +8,4 @@
 4. Shannon' Information theory actually answers why binary search works. binarizing an array to search an element gives you the maximum information! , so with that you can reach the element in the least amount of steps
 
 5. Entropy makes physical sense, it is the average number of binary questions one needs to ask to figure out a stuff.
+6. Look for talks on information theory here : https://web.stanford.edu/group/it-forum/past.html
