@@ -7,8 +7,7 @@
 5. Flashed a simple clock signal consisting of 0s and 1s alternating for 100 times (hereby called the clock signal from now on) onto the reciver circuit, probed an oscilloscope to view the output. 
 6. A major problem became existent, the pulse width is deviating from the programmed pulse width rapidly . I programmed a 1 ms pulse width and the output pulse width varied from 5 ms to 15 ms. Thus a deviation of 500 to 1700% is noted. A statistical test has been conducted to find the mean and variance of the pulse widths, the result is indicated in detail by (https://github.com/vikramsvdd/Smartphone-Flashlight-Modulation-IISc-Project-/blob/main/Results/plain_clock_signal_2.PNG)
 
-
-7. 
+7. As an alternative way of programming the pulse width, i used java's Executor Object to achive my objective. It has a comparatively better performance in terms of less divergence of pulse width, the result is indicated in detail by https://github.com/vikramsvdd/Smartphone-Flashlight-Modulation-IISc-Project-/blob/main/Results/plain_clocksignal(with%201%20ms%20delay).PNG
  
 
 
