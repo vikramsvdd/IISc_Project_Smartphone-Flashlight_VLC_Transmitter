@@ -28,7 +28,7 @@ void setup() {
   attachInterrupt(digitalPinToInterrupt(BUTTON_PIN),
                   buttonPinInterrupt,
                   CHANGE);
-}
+                  }
 
 void loop() {
   if (newPulseDurationAvailable) {
@@ -45,8 +45,16 @@ void loop() {
      // Serial.print(i + 1);
       //Serial.print(": ");
       Serial.println(pulseWidth[i]); // the pulse width in μs
+     /* if(pulseWidth[i]>5){
+        Serial.println(1);
+        }
+      else{
+        Serial.println(0);
+      }*/  
+      }
       //Serial.println(" μs");
     }
+    
     for (int i = 0; i < 100; i++) {
       pulseWidth[i] = 0; // clears the array
     }
@@ -54,4 +62,3 @@ void loop() {
   }
 
   // do your other stuff here
-}
