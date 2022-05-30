@@ -1,28 +1,37 @@
-#define BUTTON_PIN 3
+#define BUTTON_PIN 3;
+//#define apin A0;
 const int t=577;
 word pulseWidth[t];
+word v[t];
 volatile unsigned long pulseInTimeBegin = micros();
 volatile unsigned long pulseInTimeEnd = micros();
- volatile bool newPulseDurationAvailable = false;
+volatile bool newPulseDurationAvailable = false;
  int a;
 int c=0;
+int f=0;
+const float mvc=4.88;
  
 void buttonPinInterrupt()
 {
   if (digitalRead(BUTTON_PIN) == HIGH) {
     // start measuring
     pulseInTimeBegin = micros();
+    /*if(f==0){
+    v[c]=analogRead(apin);
+    f=1;}*/
   }
   else {
     // stop measuring
     pulseInTimeEnd = micros();
     newPulseDurationAvailable = true;
+   f=0;
   }
 }
 
 void setup() {
   for (int i = 0; i < t; i++) {
     pulseWidth[i] = 0; // clears the array
+    v[i]=0;
   }
   Serial.begin(115200);
   pinMode(BUTTON_PIN, INPUT);
@@ -108,19 +117,20 @@ void loop() {
       //Serial.print(": ");
       //pulseWidth[99]=a;
       Serial.println(pulseWidth[i]); // the pulse width in μs
-      /*if(pulseWidth[i]>=10000){
+      if(pulseWidth[i]>=10000 and v[i]*mvc>3500){
         Serial.println(1);
        
         }
       else{
         Serial.println(0);
-      }*/
+      }
       
       //Serial.println(" μs");
     }
    for (int i = 0; i < t; i++) {
       //Serial.println(pulseWidth[i]);
       pulseWidth[i] = 0; // clears the array
+      v[i]=0;
       c=0;
     }
 
