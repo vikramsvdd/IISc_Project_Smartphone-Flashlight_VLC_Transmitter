@@ -44,6 +44,18 @@ c. Tried to introduce a delay using a for loop looping 100 times, and had a near
 
 Ultimately, I came to know after reading several forums and querying several professionals who commented that a smartphone is a GPOS based device(General Purpose OS) whose design structure is very different from a RTOS(Gpos is like a internet system, it allocates resources to every activity without any discrimination rather than  a RTOS which works on priority), thus one cannot expect guarantees out of a GPOS unlike a RTOS . 
 
+ 19.  Now , run out of all methods, I perused for a while , if I reduce the pulse width difference that distinguishes between a 1 and 0 , there is a probability of 0 appearing as 1 and the probability of the inversion of bits increases , as I decrease the pulsewidth. Now then how can i differentiate a 0 from a 1 then seriously  without increasing pulse width difference between them as well as not compromising on data rate , now obviously the possibility seems like  I can only achieve one out of the two because this is no-brainer , because both of these things are contradictory! Well after deep thoughts,they are just seemingly contradictory , as there is a way! Surprising yet true! The difference is that when you stop thinking pulse width difference is the only saviour! , it is one of the saviours!  , wanna know the other one, that’s voltage! Now you get caught when you only differentiate 1 and 0 based on pulse width, why dont you also differentiate them based on voltage so that even if pulse width fails, voltage hails! :smiley: sorry for the punch! Now say , I add a 5 ms delay to 1 ’s symbol. Now the thing is the probability that 0 can pose as 1 is increased! But , I will add 0’s high time to be a lower intensity pulse and 1’s high time to be a higher intensity pulse. All the results and code related to this are attached in the results tab for your reference. I power the receiver circuit with 19 v source . The reason is for lower voltage powering , the flashlight intensity differences produces no voltage difference.  Now 0’s high time has a 7.5 v value and 1’s high time has a 18 v value , Now my receiver checks if i receive a pulse it should satisfy 2 conditions to be a 1: 
+
+It should have a delay >=5 ms 
+
+It should have a voltage greater > 10V.(the threshold is limited to the programmer , this is just a sample) . 
+
+Now for a 0 pulse, it has a risk of having high time pulse widths greater than 5 ms, but it gets caught at the second condition and rightly gets identified as 0 , , provided condition 2. is always reliable!! And it is!  
+
+ 
+
+Thus , I was able to rightfully classify 0s and 1s even though the pulse width data of both has an overlapping! Now , I can reduce the delay as close as  ____ us , and thus the total data rate turns out to be ___ , a blockbuster achievement for smartphone based transmitters. Now iam able to pump its data rate as close to its capacity of on-offing. This is the achievement of this type of modulation . I thought it out of my own mind 😀 yikes ! and I named it Variable Voltage Cum Pulse Width Modulation.   
+
  
 
  
