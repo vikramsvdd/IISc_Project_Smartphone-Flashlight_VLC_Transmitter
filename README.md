@@ -5,7 +5,7 @@
 ### Want just the FLowchart of my Work, here it is !:
 
 <p align="center">
-  <img width="4600" height="3000" src="/Results/Smartphone_Flashlight_Workflow_Flowchart.png">
+  <img width="313" height="3295" src="/Results/Smartphone_Flashlight_Workflow_Flowchart.png">
 </p>
 
 
