@@ -1,6 +1,6 @@
 # IISc- Workflow
 
-## Want a detailed description ? , I am warning you :D:D , [here it is  !](https://vikramsvdd.github.io/) 
+## Want a detailed description ? ,  [here it is  !](https://vikramsvdd.github.io/) 
 
 ### Want just the Flowchart of my Work to capture important milestones?, here it is !:
 
