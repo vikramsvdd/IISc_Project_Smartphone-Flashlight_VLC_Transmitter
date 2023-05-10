@@ -9,6 +9,9 @@
 </p>
 
 
+Also Some stuff to remember before reachingout to other profs:
+How is your Clock Inconsistenty different from ISI?
+
 
 
 
