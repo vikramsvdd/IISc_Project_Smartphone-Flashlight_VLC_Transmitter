@@ -9,3 +9,6 @@
 
 5. Entropy makes physical sense, it is the average number of binary questions one needs to ask to figure out a stuff.
 6. Look for talks on information theory here : https://web.stanford.edu/group/it-forum/past.html
+
+7. Also Some stuff to remember before reachingout to other profs:
+How is your Clock Inconsistenty different from ISI?
