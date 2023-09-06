@@ -9,11 +9,4 @@
 </p>
 
 
-
-
-
-
-
- 
-
- 
+Also wanted to give a credit to the developer of the base of the flashlight app that I am using as well as IISc Bengaluru and Prof Chockalingam for their support.
