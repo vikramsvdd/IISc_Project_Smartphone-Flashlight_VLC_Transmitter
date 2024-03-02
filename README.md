@@ -9,4 +9,4 @@
 </p>
 
 
-Also wanted to give a credit to the developer of the base of the flashlight app (https://github.com/SimpleMobileTools/Simple-Flashlight) that I initialy used and then modified it according to my use-case as well as IISc Bengaluru and Prof Chockalingam for their support.
+Also wanted to give  credits to the developer of the base of the flashlight app (https://github.com/SimpleMobileTools/Simple-Flashlight) that I initialy used and then modified it according to my use-case as well as IISc Bengaluru and Prof Chockalingam for their support.
